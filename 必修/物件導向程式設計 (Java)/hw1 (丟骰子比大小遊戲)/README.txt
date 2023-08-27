@@ -12,3 +12,4 @@ AUTHORS:
 USER INSTRUCTIONS:
      方法1. 執行start: Tom vs Mary丟骰子比大小, 每人丟兩次6面骰子取總和比大小, 總和大的人勝出。若大小相同則兩人再丟一次8面骰子比大小, 若又相同則平手。
      方法2. 若想測試不同產生random number的方法, 執行TestDice (Math.random() vs Fisher–Yates shuffle)。
+     使用到的技巧: abstract class, abstract method, constructor 
