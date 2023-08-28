@@ -1,0 +1,106 @@
+1.開發平台: DEV C++
+2.開發環境: Windows 10
+3.程式設計: 
+	a. 讀取:檔案 輸出:檔案
+	b. 自訂regular expression文法，採top down遞迴實現。
+	c. 遞迴跑grammar時傳遞的參數有: 目前跑到哪個位置, 正確與否(錯誤不再遞迴，跳出), 錯誤代碼, 第幾pass, 目前subroutine
+	d. 運算採用遞迴，次方由右到左計算，其餘左到右計算，邏輯運算(AND OR)也含在算術運算中。
+	e. '↑'沒有改為'^'，讀檔必須讀取ANSI編碼的txt檔案
+	f. 括號 > 次方 > 乘除 > 加減
+	g. CALL, DIMENSION宣告的變數都會存入table7
+	h. table7與table5之間以"pointer"欄位連結，table7儲存
+	i. 可以處理 IF 算術運算 THEN GTO ELSE 算術運算
+	   可以處理 IF 算術運算 THEN 算術運算 ELSE 算術運算
+	j. 在第一個pass結束後，第二個pass會負責去找table6中尚未填上位置的欄位填上(e.g CALL的forward reference)
+
+
+4.未完成的功能: "input" "output"指令，雖然reserved word檔案裡有這兩個指令，但講義跟範例都沒看到如何運作。
+
+
+
+
+
+5.GRAMMAR:
+
+grammar ::= [label_id]( prog
+			| declaration
+			| stmts )
+
+label_id ::= ID_WITH_CAPITAL_L
+
+prog ::= PROGRAM id ';'
+	| ENDP ';'
+	| ENDS ';'
+
+
+
+declaration ::= var
+		|dim
+		|label
+		|sub
+		|var_sub1
+
+var ::= VAIRABLE type ':' id vars
+
+vars ::= ';'
+	| ',' id vars
+
+type ::= BOOLEAN | REAL | INTEGER
+
+dim ::= DIMENSION type ':' dims ';'
+
+dims ::= id '(' nums ')'
+	| id '(' nums ',' dims
+
+nums ::= num
+	| num ',' nums
+
+label ::= LABEL labels
+
+labels ::= label_id ';'
+	   | label_id ',' labels
+
+sub ::= SUBROUTINE subs
+
+subs ::= id '(' ')' ';'
+	| id '(' ')' ',' subs
+	| id '(' var_sub1 ')' ';'
+	| id '(' var_sub1 ')' ',' subs'
+
+var_sub1 ::= type ':' var_sub2
+
+var_sub2 ::= id
+	     | ',' id
+
+
+
+stmts ::= ( assign | if | goto | exp | call ) ';'
+
+assign ::= ( dims | id ) '=' exp
+	   | ( dims | id ) '=' exp ',' assign
+
+exp ::= q op exp
+	| q
+
+q ::= t '+' q
+	| t '-' q
+	| t
+
+t ::= f '*' t
+	| f '/' t
+	| f
+
+f ::= e '^' f
+      | e
+
+e ::= id | num 
+	| '(' exp ')' 
+	| id '(' exp ')' nums
+
+op ::= AND | OR | EQ | GE | LE | NE | GT | LT
+
+if ::= IF exp THEN ( goto | assign ) ELSE assign
+
+goto ::= GTO label_id
+
+call ::= CALL id '(' var_sub2 ')'
