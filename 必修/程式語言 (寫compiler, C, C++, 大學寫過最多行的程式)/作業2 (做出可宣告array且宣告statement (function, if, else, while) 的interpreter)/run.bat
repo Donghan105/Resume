@@ -1,0 +1,1 @@
+0829.exe <input.txt> outmy.txt

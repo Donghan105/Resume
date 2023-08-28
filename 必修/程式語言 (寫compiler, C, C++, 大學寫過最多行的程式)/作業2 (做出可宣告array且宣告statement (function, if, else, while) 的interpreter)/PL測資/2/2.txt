@@ -1,0 +1,72 @@
+當測試「Test case 2 of 3」時，Input為>>2
+     string
+     sss;
+    int  
+   x  
+ 
+   ;   
+ x=  
+   
+    10;
+
+    cout 
+    <<   
+x 
+
+   ;   
+
+    int  
+   y  
+ 
+   ;   
+int z ;
+
+x =y+z
+- 2*x;
+3
+
+   -z;   
+
+int w ;   
+
+ w   
+  ++;
+   Done
+  (    
+    )    
+    ;   int y = 5 ;
+cout << y ;  
+<<
+
+正確的輸出應該是>>Our-C running ...
+> Definition of sss entered ...
+> Definition of x entered ...
+> Statement executed ...
+> Statement executed ...
+> Definition of y entered ...
+> Definition of z entered ...
+> Statement executed ...
+> Statement executed ...
+> Definition of w entered ...
+> Statement executed ...
+> Our-C exited ...<<
+
+你的程式的輸出是>>
+(There was a run-time error :
+Our-C running ...
+> Definition of sss entered ...
+> Definition of x entered ...
+> Statement executed ...
+> Line 2 : undefined identifier : 'cout'
+> Line 1 : unexpected token : '<'
+> Statement executed ...
+> Definition of y entered ...
+> Definition of z entered ...
+> Statement executed ...
+> Statement executed ...
+> Definition of w entered ...
+> Line 2 : undefined identifier : 'w'
+> Line 1 : unexpected token : '+'
+>
+
+A SAFECode fault has occurred. Line number unknown..)<<
