@@ -1,0 +1,10 @@
+1.開發平台: DEV C++
+2.開發環境: Windows10
+3.選擇的組合語言: SIC, SIC/XE
+4.程式設計: 分為SIC與SIC/XE模式，須執行對應的模式翻出機器碼，兩種模式都有2 passes，用來處理forward reference。SIC的翻法不會涉及到n,i,x,b,p,e的計算，只要考慮index register, 變數位置與查出機器碼即可翻譯出來。
+	    SIC/XE指令則有分為TYPE 1, TYPE 2, TYPE 3&4三類分別對應SIC/XE的四種定址模式，只要得知指令是屬於哪一種定種模式，就以對應的方式翻出機器碼。SIC/XE涉及到n,i,x,b,p,e的計算，且format中計算disp與address
+	    的長度不同，翻出的機器碼長度也不同。需要先分辨出是哪種類型的指令才能知道最後一個欄位的長度，並且把這些nibble結合算出機器碼(涉及10進位與16進位之間轉換)。
+	    SIC/XE, SIC兩種方法在PASS1與PASS2做的事情都相似，PASS1要先辨認出指令並拿到機器碼，還要為變數定下位址，紀錄在cross reference中。PASS2就要把機器碼翻出。Object code, location, LOCTR相關的變數都是以string儲存，這樣才方便
+	    做字串結合，但計算時就要不斷的在字串與int之間交互轉換。SIC/XE有自己的struct，因為要有欄位擺放n,i,x,b,p,e的值。SIC的結果vector是一維陣列，存放內容是每一行依序放入vector中，以偵測到\n得知此行結束到下一行指令。SIC/XE則是
+	    二維陣列，以行為單位存放。
+5.未完成的功能: 可能有些沒在範例中出現的pseudo code翻出來的指令長度不正確(不確定如何翻)，導致LOC, LOCTR的結果不正確。
