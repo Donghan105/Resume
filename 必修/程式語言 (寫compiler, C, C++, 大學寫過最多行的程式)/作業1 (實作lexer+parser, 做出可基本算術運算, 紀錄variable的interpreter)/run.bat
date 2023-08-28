@@ -1,0 +1,1 @@
+19.exe <input.txt> outmy.txt
