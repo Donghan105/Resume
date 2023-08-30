@@ -1,8 +1,0 @@
-MANAGER:ID,DEPARTMENT_ID,DEPARTMENT_NAME,LOCATION_ID,:LABEL,manager_lname,manager_fname
-1000,70,Public Relations,1700,manager,King,Steven
-2000,10,Administration,1700,manager,Whalen,Jennefer
-2010,20,Marketing,1800,manager,Hartstein,Michael
-1240,50,Shipping,1500,manager,Mourgos,Kevin
-1030,60,IT,1400,manager,Hunold,Alexander
-1490,80,Sales,2500,manager,Zlotkey,Eleni
-2050,110,Accounting,1700,manager,Higgins,Shelley
