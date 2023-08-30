@@ -1,0 +1,8 @@
+"resignation:ID","start_date","end_date","JOB_ID","DEPARTMENT_ID",":LABEL","EMPLOYEE_ID"
+1020,1993-01-13,0098-07-24,"IT_PROG",60,"resignation",102
+1010,1989-09-21,0093-10-27,"AC-ACCOUNT",110,"resignation",101
+2010,1996-02-17,0099-12-19,"MK_REP",20,"resignation",201
+1140,1998-03-24,0099-12-31,"ST_CLERK",50,"resignation",114
+1220,1999-01-01,0099-12-31,"ST_CLERK",50,"resignation",122
+2000,1987-09-17,0093-06-17,"AD_ASST",90,"resignation",200
+1760,1998-03-24,0098-12-31,"SA_REP",80,"resignation",176
