@@ -2,7 +2,6 @@
 我是莊東翰，以下是我的履歷。  
 履歷網址 (超過14天後連結會失效): https://pda.104.com.tw/profile/share/eT1wZSCaSjDQXrD2o8GBHOo0YnqRY0xI  
   
-  
 此repository有上傳的課程作業 (以有程式作業為主):  
 必修: 資料結構、系統程式、作業系統、演算法、物件導向程式設計、程式語言 (Compiler)、中央大學編譯器 (外校修課)  
 選修: 圖形識別 (機器學習)、大數據智慧技術 (R語言, 聚類分析)、資料庫系統 (SQL)  
