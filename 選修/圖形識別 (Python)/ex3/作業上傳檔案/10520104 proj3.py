@@ -27,7 +27,7 @@ display(data.describe())
 print("\n", end='')
 print("\n", end='')
 # TODO: Select three indices of your choice you wish to sample from the dataset
-# indices = np.random.randint(low = 0, high = 440, size = 3)  # ÀH¾÷²£¥Í0-439¤§¶¡ªº¼Æ ¨ú¤T­Ó
+# indices = np.random.randint(low = 0, high = 440, size = 3)  # éš¨æ©Ÿç”¢ç”Ÿ0-439ä¹‹é–“çš„æ•¸ å–ä¸‰å€‹
 indices = [231, 409, 181]
 print("Random Indices: {}".format(indices))
 
@@ -37,9 +37,9 @@ print("Chosen samples of wholesale customers dataset:")
 display(samples)
 
 print("Question 1:")
-print("index 231: ¤û¥¤»P¨ä¥LªF¦è¬Û¤ñ¯S§O¦h¡A¦³¥i¯à¬O±M½æ¤û¥¤ªº¹s°â°Ó(retailers)")
-print("index 409: ¼ô­¹¸û¦h¡A¥B¦³¶R²M¼ä¥Î«~¡AÀ³¸Ó¬OÀ\ÆU(restaurant)")
-print("index 181: ¨C¤@¼ËªF¦è³£«Ü¦h¡AÀ³¸Ó¬O¶W¥«(market)")
+print("index 231: ç‰›å¥¶èˆ‡å…¶ä»–æ±è¥¿ç›¸æ¯”ç‰¹åˆ¥å¤šï¼Œæœ‰å¯èƒ½æ˜¯å°ˆè³£ç‰›å¥¶çš„é›¶å”®å•†(retailers)")
+print("index 409: ç†Ÿé£Ÿè¼ƒå¤šï¼Œä¸”æœ‰è²·æ¸…æ½”ç”¨å“ï¼Œæ‡‰è©²æ˜¯é¤å»³(restaurant)")
+print("index 181: æ¯ä¸€æ¨£æ±è¥¿éƒ½å¾ˆå¤šï¼Œæ‡‰è©²æ˜¯è¶…å¸‚(market)")
 
 
 print("\n", end='')
@@ -65,9 +65,9 @@ for var in dep_vars:
 
 
 print("Question 2:")
-print("Frozen¡A¦]¬°Frozen¤À¼Æ¬O¥¿ªº¦ı«Ü§C¡A¥NªíFrozen¥i¥Hfit¦ı¤£¦n¹w´ú¡A¦³¥i¯à¬O­«­nªº¯S¼x¡C")
+print("Frozenï¼Œå› ç‚ºFrozenåˆ†æ•¸æ˜¯æ­£çš„ä½†å¾ˆä½ï¼Œä»£è¡¨Frozenå¯ä»¥fitä½†ä¸å¥½é æ¸¬ï¼Œæœ‰å¯èƒ½æ˜¯é‡è¦çš„ç‰¹å¾µã€‚")
 print("0.2539")
-print("¬O¡A¦³¥i¯à¬O­«­nªº¯S¼x¡C")
+print("æ˜¯ï¼Œæœ‰å¯èƒ½æ˜¯é‡è¦çš„ç‰¹å¾µã€‚")
 
 
 print("\n", end='')
@@ -89,9 +89,9 @@ for cols in data.columns.values:
 ax.set(xlabel=" ")
 plt.show()
 print("Question 3:")
-print("Milk»PGrocery©MDetergents_Paper¦³°ª«×¬ÛÃö¡C°ß¤@»PFrozen¬ÛÃöªº¤]´N¥u¦³Fresh¡A¦ı¼Æ­È¤£°ª¡CDelicatessen»P¥ô¦óªF¦è³£¦³¤@ÂIÃöÁp¡C")
-print("½T¹ê²Å¦X§Úªº·Qªk¡AFrozenºâ¬O¯S§Oªº¯S¼x¡A¨S¦³¤Ó¦hÃöÁp©Ê¡C")
-print("¸ê®Æ¤£§e²{±`ºA¤À§G¡C")
+print("Milkèˆ‡Groceryå’ŒDetergents_Paperæœ‰é«˜åº¦ç›¸é—œã€‚å”¯ä¸€èˆ‡Frozenç›¸é—œçš„ä¹Ÿå°±åªæœ‰Freshï¼Œä½†æ•¸å€¼ä¸é«˜ã€‚Delicatessenèˆ‡ä»»ä½•æ±è¥¿éƒ½æœ‰ä¸€é»é—œè¯ã€‚")
+print("ç¢ºå¯¦ç¬¦åˆæˆ‘çš„æƒ³æ³•ï¼ŒFrozenç®—æ˜¯ç‰¹åˆ¥çš„ç‰¹å¾µï¼Œæ²’æœ‰å¤ªå¤šé—œè¯æ€§ã€‚")
+print("è³‡æ–™ä¸å‘ˆç¾å¸¸æ…‹åˆ†ä½ˆã€‚")
 
 
 print("\n", end='')
@@ -119,7 +119,7 @@ for feature in log_data.keys():
     Q3 = np.percentile(log_data[feature], 75)
 
     # TODO: Use the interquartile range to calculate an outlier step (1.5 times the interquartile range)
-    step = (Q3 - Q1) * 1.5  # ¥|¤À¦ì¶Z*1.5
+    step = (Q3 - Q1) * 1.5  # å››åˆ†ä½è·*1.5
 
     # Display the outliers
     print("Data points considered outliers for the feature '{}':".format(feature))
@@ -146,9 +146,9 @@ good_data = log_data.drop(log_data.index[outliers]).reset_index(drop=True)
 
 
 print("Question 4:")
-print("¦³¡A¦@5µ§¸ê®Æ¥X²{¦b¤£¥u¤@­Ófeature¤¤¡C")
-print("³o¨Ç¸ê®ÆÄİ©ó¦hºØfeatures¡AÀ³¸Ó²¾°£¡C")
-print("¦]¬°k-means·|³Q³o¨Çoutliers¼vÅT¡A¦pªG¤£±NÂø°T²¾°£¡A¥i¯à·|¹ï«áÄò¤ÀªR¥X¨Óªºµ²ªG³y¦¨¼vÅT¡C")
+print("æœ‰ï¼Œå…±5ç­†è³‡æ–™å‡ºç¾åœ¨ä¸åªä¸€å€‹featureä¸­ã€‚")
+print("é€™äº›è³‡æ–™å±¬æ–¼å¤šç¨®featuresï¼Œæ‡‰è©²ç§»é™¤ã€‚")
+print("å› ç‚ºk-meansæœƒè¢«é€™äº›outlierså½±éŸ¿ï¼Œå¦‚æœä¸å°‡é›œè¨Šç§»é™¤ï¼Œå¯èƒ½æœƒå°å¾ŒçºŒåˆ†æå‡ºä¾†çš„çµæœé€ æˆå½±éŸ¿ã€‚")
 print("\n", end='')
 print("\n", end='')
 
@@ -208,10 +208,10 @@ print("Question 5:")
 print("1. 0.4430 + 0.2638 = 0.7068 (70%)")
 print("2. 93%")
 print("3.")
-print("Dimension1: Detergents_Paper, Grocery, Milk¦³¸û¤pÅÜ²§¼Æ¡A³o¨ÇªF¦èÁÊ¶R»İ¨D¸û¤j¡A¥i¯à¬°Retailer")
-print("Dimension2: Fresh, Frozen, Delicatessen¦³¸û¤pÅÜ²§¼Æ¡A³o¨ÇªF¦èÁÊ¶R»İ¨D¸û¤j¡A¥i¯à¬°Restaurant")
-print("Dimension3: Fresh, Detergents_Paper¦³¸û¤pÅÜ²§¼Æ¡A³o¨ÇªF¦èÁÊ¶R»İ¨D¸û¤j¡A¥i¯à¬°Cafe")
-print("Dimension4: Fresh, Delicatessen¦³¸û¤pÅÜ²§¼Æ¡A³o¨ÇªF¦èÁÊ¶R»İ¨D¸û¤j¡A¥i¯à¬°Cafe")
+print("Dimension1: Detergents_Paper, Grocery, Milkæœ‰è¼ƒå°è®Šç•°æ•¸ï¼Œé€™äº›æ±è¥¿è³¼è²·éœ€æ±‚è¼ƒå¤§ï¼Œå¯èƒ½ç‚ºRetailer")
+print("Dimension2: Fresh, Frozen, Delicatessenæœ‰è¼ƒå°è®Šç•°æ•¸ï¼Œé€™äº›æ±è¥¿è³¼è²·éœ€æ±‚è¼ƒå¤§ï¼Œå¯èƒ½ç‚ºRestaurant")
+print("Dimension3: Fresh, Detergents_Paperæœ‰è¼ƒå°è®Šç•°æ•¸ï¼Œé€™äº›æ±è¥¿è³¼è²·éœ€æ±‚è¼ƒå¤§ï¼Œå¯èƒ½ç‚ºCafe")
+print("Dimension4: Fresh, Delicatessenæœ‰è¼ƒå°è®Šç•°æ•¸ï¼Œé€™äº›æ±è¥¿è³¼è²·éœ€æ±‚è¼ƒå¤§ï¼Œå¯èƒ½ç‚ºCafe")
 print("\n", end='')
 print("\n", end='')
 
@@ -284,21 +284,21 @@ def biplot(good_data, reduced_data, pca):
 
 # Create a biplot
 biplot(good_data, reduced_data, pca)
-print("Dimension1: Detergents_Paper, Grocery, Milk, ¤TªÌ³£¾a«Üªñ¡Aªí¥Ü¤TªÌ¦³±j¯PÃöÁp¡C")
-print("Dimension2: Fresh, Frozen, Delicatessen¡C Fresh, Frozen§Ö­n­«©M¡A¨âªÌ¤§¶¡¦³±j¯PÃö³s©Ê¡C")
-print("»P«e­±ªº°²³]¤j­P¬Û¦P¡C")
+print("Dimension1: Detergents_Paper, Grocery, Milk, ä¸‰è€…éƒ½é å¾ˆè¿‘ï¼Œè¡¨ç¤ºä¸‰è€…æœ‰å¼·çƒˆé—œè¯ã€‚")
+print("Dimension2: Fresh, Frozen, Delicatessenã€‚ Fresh, Frozenå¿«è¦é‡å’Œï¼Œå…©è€…ä¹‹é–“æœ‰å¼·çƒˆé—œé€£æ€§ã€‚")
+print("èˆ‡å‰é¢çš„å‡è¨­å¤§è‡´ç›¸åŒã€‚")
 
 
 
 
 
 print("Question 6:")
-print("K-Means:°²·Q¤À¬°k¸s¡A¨C¤@¸s³£¦³¤¤¤ßÂI(k­Ó)¡C¨C­ÓÂI»Pk­Ó¤¤¤ßÂI¤ñ¸û¡A±N¨C¤@ÂI¤ÀÃş¬°¶ZÂ÷³Ìªñªº¤¤¤ßÂI±Ú¸s¡A¨Ã¨ú±o¥æ¬É½u¡C")
-print("¸g¹L¦h¦¸¹Bºâ¦¬ÀÄª½¨ì¥æ¬É½u¤£¦AÅÜ°Ê¡A±o¨ì³Ì²×¤ÀÃş¡C")
-print("ÀuÂI:²z½×Â²³æ¡A¦n¹ê²{¡A¥B®Ä²v°ª¡A¾A¦X¥¨¶q¸ê®Æ¡C")
-print("Gaussian Mixture Model:±N¦UºØ©â¼Ë¥X¨Óªº¼Æ¾Ú§Î¦¨ªº¦h­Ó°ª´µ¤À¥¬¹Ï§Î¡A©¼¦¹¨úÁp¤Î©Ò±o¨ìªº³Ì²×¹Ï§Î¬°Gaussian Mixture Model¡C")
-print("ÀuÂI:¼u©Ê°ª¡A³æµ§¸ê®Æ¥i¥HÄİ©ó¦hºØ¸s¶°¡C")
-print("§Ú·|¿ï¾ÜK-Means¡A¦]¬°¥u¦³6­Ó¯S¼x¡A¥B¤ñ¸û¦nimplement¡C")
+print("K-Means:å‡æƒ³åˆ†ç‚ºkç¾¤ï¼Œæ¯ä¸€ç¾¤éƒ½æœ‰ä¸­å¿ƒé»(kå€‹)ã€‚æ¯å€‹é»èˆ‡kå€‹ä¸­å¿ƒé»æ¯”è¼ƒï¼Œå°‡æ¯ä¸€é»åˆ†é¡ç‚ºè·é›¢æœ€è¿‘çš„ä¸­å¿ƒé»æ—ç¾¤ï¼Œä¸¦å–å¾—äº¤ç•Œç·šã€‚")
+print("ç¶“éå¤šæ¬¡é‹ç®—æ”¶æ–‚ç›´åˆ°äº¤ç•Œç·šä¸å†è®Šå‹•ï¼Œå¾—åˆ°æœ€çµ‚åˆ†é¡ã€‚")
+print("å„ªé»:ç†è«–ç°¡å–®ï¼Œå¥½å¯¦ç¾ï¼Œä¸”æ•ˆç‡é«˜ï¼Œé©åˆå·¨é‡è³‡æ–™ã€‚")
+print("Gaussian Mixture Model:å°‡å„ç¨®æŠ½æ¨£å‡ºä¾†çš„æ•¸æ“šå½¢æˆçš„å¤šå€‹é«˜æ–¯åˆ†å¸ƒåœ–å½¢ï¼Œå½¼æ­¤å–è¯åŠæ‰€å¾—åˆ°çš„æœ€çµ‚åœ–å½¢ç‚ºGaussian Mixture Modelã€‚")
+print("å„ªé»:å½ˆæ€§é«˜ï¼Œå–®ç­†è³‡æ–™å¯ä»¥å±¬æ–¼å¤šç¨®ç¾¤é›†ã€‚")
+print("æˆ‘æœƒé¸æ“‡K-Meansï¼Œå› ç‚ºåªæœ‰6å€‹ç‰¹å¾µï¼Œä¸”æ¯”è¼ƒå¥½implementã€‚")
 
 
 
@@ -329,4 +329,4 @@ print("Question 7:")
 print("2 clusters: 0.4263")
 print("3 clusters: 0.3974")
 print("4 clusters: 0.3312")
-print("2 clusters¤À¼Æ³Ì°ª")
+print("2 clustersåˆ†æ•¸æœ€é«˜")
